@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import static com.Log.LoggerControl.log;
+
 public class BrowserWorld {
 
     public static ThreadLocal<WebDriver> driver = new ThreadLocal();
@@ -24,6 +26,7 @@ public class BrowserWorld {
         }
 
         if (CurrentDriver != null) {
+            log.info("Launched " + browser + " browser successfully." + " Navigating to: " + webPage);
             driver.set(CurrentDriver);
             driver.get().manage().window().maximize();
             driver.get().get(webPage);

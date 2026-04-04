@@ -2,6 +2,7 @@ package learner;
 
 import org.testng.annotations.Test;
 
+import com.Log.LoggerControl;
 import com.browser.BrowserWorld;
 
 public class homepage {
@@ -11,6 +12,7 @@ public class homepage {
         BrowserWorld browserworld = new BrowserWorld();
         browserworld.launchBrowser("https://www.google.com/", "chrome");
         Thread.sleep(5000);
+        LoggerControl.message("Google homepage launched successfully.").pass();
         browserworld.quitDriver();
     }
 }

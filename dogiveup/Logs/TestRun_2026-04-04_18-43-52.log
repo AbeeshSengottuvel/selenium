@@ -1,0 +1,2 @@
+2026-04-04 18:43:52 DEBUG LoggerControl:29 - Launched chrome browser successfully. Navigating to: https://www.google.com/
+2026-04-04 18:43:59 INFO  LoggerControl:23 - PASS: Google homepage launched successfully.
