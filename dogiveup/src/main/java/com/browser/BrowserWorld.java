@@ -27,9 +27,12 @@ public class BrowserWorld {
 
         if (CurrentDriver != null) {
             LoggerControl.message("Launched " + browser + " browser successfully." + " Navigating to: " + webPage).pass();
+
             driver.set(CurrentDriver);
             driver.get().manage().window().maximize();
             driver.get().get(webPage);
+
+            LoggerControl.message("Navigated to " + webPage + " successfully.").pass();
         }
         return driver.get();
     }
