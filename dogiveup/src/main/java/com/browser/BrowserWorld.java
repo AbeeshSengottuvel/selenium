@@ -9,42 +9,46 @@ import com.Log.LoggerControl;
 
 public class BrowserWorld {
 
-    public static ThreadLocal<WebDriver> driver = new ThreadLocal();
+    public static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
     public WebDriver launchBrowser(String webPage, String browser) {
-        WebDriver CurrentDriver = null;
+
+        WebDriver currentDriver = null;
+
         if ("chrome".equalsIgnoreCase(browser)) {
-            CurrentDriver = new ChromeDriver();
+            currentDriver = new ChromeDriver();
         } else if ("edge".equalsIgnoreCase(browser)) {
-            CurrentDriver = new EdgeDriver();
+            currentDriver = new EdgeDriver();
         } else if ("firefox".equalsIgnoreCase(browser)) {
-            CurrentDriver = new FirefoxDriver();
+            currentDriver = new FirefoxDriver();
         } else if ("safari".equalsIgnoreCase(browser)) {
             System.out.println("Safari browser is not supported in this implementation.");
         } else {
             System.out.println("Invalid browser specified. Please choose 'chrome', 'edge', 'firefox', or 'safari'.");
         }
 
-        if (CurrentDriver != null) {
-            LoggerControl.message("Launched " + browser + " browser successfully." + " Navigating to: " + webPage).pass();
+        if (currentDriver != null) {
+            LoggerControl.message("Launched " + browser + " browser successfully. Navigating to: " + webPage).pass();
 
-            driver.set(CurrentDriver);
-            driver.get().manage().window().maximize();
-            driver.get().get(webPage);
+            drivers.set(currentDriver);
+
+            currentDriver.manage().window().maximize();
+            currentDriver.get(webPage);
 
             LoggerControl.message("Navigated to " + webPage + " successfully.").pass();
         }
-        return driver.get();
+
+        return driver();
     }
 
-    public WebDriver getDriver() {
-        return driver.get();
+    public static WebDriver driver() {
+        return drivers.get();
     }
 
     public void quitDriver() {
-        if (driver.get() != null) {
-            driver.get().quit();
-            driver.remove();
+        if (driver() != null) {
+            driver().quit();
+            drivers.remove();
         }
     }
 }

@@ -1,0 +1,17 @@
+2026-04-05 15:23:07 INFO  LoggerControl:26 - PASS: --- Test Started: Automating Chrome New Tab Page ---
+2026-04-05 15:23:07 INFO  LoggerControl:26 - PASS: Attempting to launch Chrome and navigate to chrome://newtab/
+2026-04-05 15:23:09 INFO  LoggerControl:26 - PASS: Launched chrome browser successfully. Navigating to: chrome://newtab/
+2026-04-05 15:23:10 INFO  LoggerControl:26 - PASS: Navigated to chrome://newtab/ successfully.
+2026-04-05 15:23:10 INFO  LoggerControl:26 - PASS: Chrome New Tab page launched successfully.
+2026-04-05 15:23:10 INFO  LoggerControl:26 - PASS: Waiting up to 10 seconds for the first Shadow Host (<ntp-app>)...
+2026-04-05 15:23:10 INFO  LoggerControl:26 - PASS: First Shadow Host located successfully.
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Pierced the first Shadow Root.
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Looking for the second Shadow Host (<cr-searchbox>)...
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Second Shadow Host located successfully.
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Pierced the second Shadow Root.
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Looking for the actual input field...
+2026-04-05 15:23:11 INFO  LoggerControl:26 - PASS: Input field found! Typing 'youtube'...
+2026-04-05 15:23:12 INFO  LoggerControl:26 - PASS: Pressing the ENTER key...
+2026-04-05 15:23:14 INFO  LoggerControl:26 - PASS: Search executed successfully!
+2026-04-05 15:23:15 INFO  LoggerControl:26 - PASS: Cleaning up and closing the browser.
+2026-04-05 15:23:15 INFO  LoggerControl:26 - PASS: --- Test Finished ---

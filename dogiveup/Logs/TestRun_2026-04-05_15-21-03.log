@@ -1,0 +1,3 @@
+2026-04-05 15:21:03 INFO  LoggerControl:26 - PASS: Launched chrome browser successfully. Navigating to: chrome://newtab/
+2026-04-05 15:21:04 INFO  LoggerControl:26 - PASS: Navigated to chrome://newtab/ successfully.
+2026-04-05 15:21:07 INFO  LoggerControl:26 - PASS: Google homepage launched successfully.
